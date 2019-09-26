@@ -9,6 +9,12 @@ class ATMController
 
   def run
     @view.greeting
+    pin = @view.prompt_user_pin
+    
+    if !@model.correct_pin?(pin)
+      return @view.incorrect_pin
+    end
+
     input = get_user_menu_input
 
     case input
