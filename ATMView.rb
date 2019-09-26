@@ -3,6 +3,11 @@ class ATMView
     puts "Hi, Welcome to the ATM machine!"
   end
 
+  def prompt_user_pin
+    puts "Please enter your PIN"
+    gets.chomp
+  end
+
   def menu
     puts "Enter (1) to Withdraw, (2) to Deposit, (3) to View Balance or (4) to exit"
     gets.chomp
@@ -28,6 +33,10 @@ class ATMView
 
   def user_overwithdraw
     puts "Sorry, you do not have enough funds."
+  end
+
+  def incorrect_pin
+    puts "Sorry, that was the wrong PIN"
   end
 
   def goodbye

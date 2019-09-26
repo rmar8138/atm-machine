@@ -3,6 +3,11 @@ class ATMModel
 
   def initialize(balance: 100)
     @balance = balance
+    @pin = "123"
+  end
+
+  def correct_pin?(input)
+    input == @pin ? true : false
   end
 
   def withdraw_money(amount)
